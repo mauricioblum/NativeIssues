@@ -1,20 +1,16 @@
-import {
-  createAppContainer,
-  createSwitchNavigator,
-  createBottomTabNavigator,
-} from 'react-navigation';
-
-import { colors } from '~/styles';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import Home from '~/pages/Home';
+import RepositoryDetails from '~/pages/RepositoryDetails';
 
-const Routes = (userLogged = false) => createAppContainer(
+const Routes = () => createAppContainer(
   createSwitchNavigator(
     {
       Home,
+      RepositoryDetails,
     },
     {
-      initialRouteName: userLogged ? 'Home' : 'Home',
+      initialRouteName: 'Home',
     },
   ),
 );

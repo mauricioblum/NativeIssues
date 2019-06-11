@@ -17,11 +17,11 @@ export default class App extends Component {
   }
 
   render() {
-    const { userChecked, userLogged } = this.state;
+    //const { userChecked, userLogged } = this.state;
 
-    if (!userChecked) return null;
+    //if (!userChecked) return null;
 
-    const Routes = createNavigator(userLogged);
+    const Routes = createNavigator();
 
     return <Routes />;
   }
